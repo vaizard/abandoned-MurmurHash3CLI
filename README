@@ -1,0 +1,16 @@
+#######################
+### MurmurHash3CLI ####
+#######################
+A C++ rewrite of the smhasher project to bring Murmurhash v.3 to the Linux shell.
+home: http://murmur.vaizard.org/en/
+
+
+Usage : MurmurHash3CLI <32bit-decimal-seed>
+
+Application reads the input data from the standard input
+and prints the result 128-bit hex coded hash to the standard output.
+Seed can be either signed or unsigned.
+
+
+NOTE : when passing a string to MurmurHash3CLI with echo, remember to use
+       echo -n <string> | MurmurHash3CLI <32bit-decimal-seed>
