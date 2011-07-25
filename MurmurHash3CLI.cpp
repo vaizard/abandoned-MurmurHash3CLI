@@ -25,7 +25,12 @@
 #include <iomanip>
 #include <iterator>
 #include <iostream>
-#include "MurmurHash3.hpp"
+#include "MurmurHash3.h"
+
+#define MURMURHASH3_OUTPUT_LENGTH	16
+
+typedef uint8_t MurmurHash3_output_t[MURMURHASH3_OUTPUT_LENGTH];
+typedef uint32_t MurmurHash3_seed_t;
 
 using namespace std;
 

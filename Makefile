@@ -24,11 +24,11 @@ OBJECTS = MurmurHash3CLI.o MurmurHash3.o
 $(APPNAME) : $(OBJECTS)
 	$(COMPILER) -Wall -pedantic -o $(APPNAME) $(OBJECTS)
 
-MurmurHash3CLI.o : MurmurHash3.hpp MurmurHash3CLI.cpp
-	$(COMPILER) -Wall -pedantic -c MurmurHash3CLI.cpp
+$(APPNAME).o : MurmurHash3.h $(APPNAME).cpp
+	$(COMPILER) -Wall -pedantic -c $(APPNAME).cpp
 
-MurmurHash3.o : MurmurHash3.hpp MurmurHash3.cpp
-	$(COMPILER) -Wall -pedantic -c MurmurHash3.cpp
+MurmurHash3.o : MurmurHash3.h MurmurHash3.cpp
+	$(COMPILER) -Wall -pedantic --std=c++0x -c MurmurHash3.cpp
 
 
 .PHONY: install
